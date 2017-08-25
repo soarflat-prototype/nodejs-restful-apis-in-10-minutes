@@ -1,5 +1,5 @@
-module.exports = (app) => {
-  const todoList = require('../controllers/todoListController')
+module.exports = function (app) {
+  const todoList = require('../controllers/todoListController');
 
   app.route('/tasks')
     .get(todoList.list_all_tasks)
@@ -10,6 +10,3 @@ module.exports = (app) => {
     .put(todoList.update_a_task)
     .delete(todoList.delete_a_task);
 };
-
-
-

@@ -4,9 +4,9 @@ const Schema = mongoose.Schema;
 const TaskSchema = new Schema({
   name: {
     type: String,
-    Required: 'Kindly enter the name of the task'
+    required: 'Kindly enter the name of the task'
   },
-  Create_date: {
+  Created_date: {
     type: Date,
     default: Date.now
   },
